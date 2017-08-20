@@ -1,0 +1,21 @@
+The master branch has been abandoned.
+
+###for branch kicad-master-origin
+###
+git checkout -b kicad-master-origin remotes/origin/kicad-master-origin --
+git checkout kicad-master-origin --
+git reset --hard HEAD
+git clean -fdx
+
+git remote add upstream https://github.com/KiCad/kicad-i18n.git
+git pull upstream master
+
+
+###for branch kicadMaster-for-pullRequest
+###
+git checkout -b kicadMaster-for-pullRequest remotes/origin/kicadMaster-for-pullRequest --
+git checkout kicadMaster-for-pullRequest --
+git reset --hard HEAD
+git clean -fdx
+git merge --no-ff -m "force to replace current code with the code of branch kicad-master-origin" kicad-master-origin
+
