@@ -19,3 +19,6 @@ git reset --hard HEAD
 git clean -fdx
 git merge --no-ff -m "force to replace current code with the code of branch kicad-master-origin" kicad-master-origin
 
+git push --progress "origin" kicad-master-origin:kicad-master-origin
+git push --progress "origin" develop:develop
+git push --progress "origin" kicadMaster-for-pullRequest:kicadMaster-for-pullRequest
